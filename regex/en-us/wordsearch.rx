@@ -1,1 +1,1 @@
-.*(find) (mentions of|the phrase) (?P<Word>\S+) ?(in)? ?(?P<ArticleTitle>.+)?
+.(mentions of|the phrase) (?P<Word>\S+) ?(in)? ?(?P<ArticleTitle2>.+)?
