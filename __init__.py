@@ -141,8 +141,8 @@ class WikipediaSkill(MycroftSkill):
           self.speak_dialog("Sorry, that section does not exist")
           
     @intent_handler(IntentBuilder("").require("Sort").
-                    one_of("ArticleTitle2", "wiki_article").
-                    require("Word"))
+                    require("Word").
+                    one_of("ArticleTitle2", "wiki_article"))
     def handle_word_search(self, message):
       """reads through the page and finds mentions of requested words or phrases
       """
