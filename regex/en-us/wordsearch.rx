@@ -1,1 +1,1 @@
-.(mentions of|the phrase) (?P<Word>\S+) ?(in)? ?(?P<ArticleTitle2>.+)?
+.(mentions of|the phrase) (?P<Word>\S+)
