@@ -1,1 +1,1 @@
-.(mentions of|the phrase) (?P<Word>\S+)
+.(mentions of|the phrase) (?P<Word>.+)
