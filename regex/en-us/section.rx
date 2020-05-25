@@ -1,1 +1,1 @@
-.*(about the|read|read the) (?P<Section>\S+) 
+.*(about|read) ?(the|section)? (?P<Section>\S+)
