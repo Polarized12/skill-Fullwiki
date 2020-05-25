@@ -117,8 +117,7 @@ class WikipediaSkill(MycroftSkill):
     
     @intent_handler(IntentBuilder("").require("ReadSection").
                     one_of("ArticleTitle1", "wiki_article").
-                    require("Section").
-                    optionally("Section2"))
+                    require("Section"))
     def handle_section_query(self, message):
       """reads requested section
       """
@@ -129,14 +128,8 @@ class WikipediaSkill(MycroftSkill):
         section = a.section(sInput.capitalize())
         if section is not None:
           self.speak_dialog(section)
-        else:
-          sInput += " "
-          sInput += message.data.get("Section2").capitalize()
-          section = a.section(sInput.capitalize())
-          if section is not None:
-            self.speak_dialog(section)
-          else:
-            self.speak_dialog("Sorry, that section does not exist")
+        else: 
+          self.speak_dialog("Sorry, that section does not exist")
         return
       article = message.data.get("ArticleTitle")
       r = wiki.search(article, 1)
