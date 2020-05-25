@@ -154,7 +154,9 @@ class WikipediaSkill(MycroftSkill):
       """reads through the page and finds mentions of requested words or phrases
       """
       word = message.data.get("Word")
+      self.speak(word)
       article = message.data.get("wiki_article")
+      self.speak(article)
       if article is None:
         article = message.data.get("ArticleTitle2")
       r = wiki.search(article, 1)
